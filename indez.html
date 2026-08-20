@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truco Arena Online</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 8px;
+      color: #ffd43b;
+    }
+
+    p {
+      color: #cbd5e1;
+    }
+
+    .card {
+      background: #172033;
+      padding: 25px;
+      border-radius: 18px;
+      margin-top: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      margin: 10px 0;
+      border: 0;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      background: #ffd43b;
+      color: #111827;
+    }
+
+    button:hover {
+      transform: scale(1.02);
+    }
+
+    .secondary {
+      background: #334155;
+      color: white;
+    }
+
+    #mensagem {
+      margin-top: 18px;
+      color: #86efac;
+      min-height: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🃏 Truco Arena</h1>
+    <p>Truco Paulista e Truco Mineiro Online</p>
+
+    <div class="card">
+      <h2>Escolha seu jogo</h2>
+
+      <button onclick="jogar('Truco Paulista')">
+        Truco Paulista
+      </button>
+
+      <button onclick="jogar('Truco Mineiro')">
+        Truco Mineiro
+      </button>
+
+      <button class="secondary" onclick="jogar('2 jogadores')">
+        👥 Jogar 2 jogadores
+      </button>
+
+      <button class="secondary" onclick="jogar('4 jogadores')">
+        👥 Jogar 4 jogadores
+      </button>
+
+      <div id="mensagem"></div>
+    </div>
+  </div>
+
+  <script>
+    function jogar(modo) {
+      document.getElementById("mensagem").innerText =
+        "Você escolheu: " + modo + " 🎮";
+    }
+  </script>
+</body>
+</html>
